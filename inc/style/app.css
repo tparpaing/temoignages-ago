@@ -1,1 +1,243 @@
+/* Fonts Imports */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;600;700;900&display=swap');
 
+/* General rules */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    font-family: 'Lexend', 'Frutiger', sans-serif;
+    font-size: 16px;
+}
+
+b {
+    font-weight: 700;
+}
+
+/* HEADER */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 100vw;
+    height: 70px;
+    background-color: #fff;
+}
+
+header .logo {
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    height: 70px;
+    width: 70px;
+}
+
+header .logo img,
+footer .logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100px;
+    right: 0;
+    width: calc(100vw - 100px);
+    height: 70px;
+    line-height: 70px;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    font-size: 36px;
+}
+
+header .pause {
+    position: absolute;
+    display: none;
+    height: 70px;
+    width: 50px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+header .pause svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* BODY */
+.container {
+    position: absolute;
+    display: block;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding: 0 150px;
+}
+
+.container p {
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #fff;
+    font-size: 22px;
+}
+
+.container h1 {
+    text-align: center;
+    font-weight: 900;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.container h1::after {
+    content: '';
+    display: block;
+    background-color: #fff;
+    width: 40px;
+    height: 5px;
+    margin: 5px 0 10px 0;
+    padding: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Mise en forme des boutons */
+#buttons div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+
+#buttons div button {
+    display: block;
+    padding: 10px 20px;
+    margin: 0;
+    border: 5px solid #fff;
+    border-radius: 100px;
+    color: #0c8260;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all .3s;
+}
+
+#buttons div button svg {
+    margin: 0 10px 0 0;
+}
+
+#buttons div button:hover,
+#buttons div button.active {
+    color: #fff;
+    background: transparent;
+}
+
+#buttons div button.active svg {
+    animation-name: rotateIcon;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+table td {
+    padding: 8px;
+}
+
+table thead td {
+    font: inherit;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #fff;
+    font-size: 22px;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    margin: 55px 0 15px 0;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 100%;
+    height: 75px;
+}
+
+footer .logo {
+    display: block;
+    width: 55px;
+}
+
+footer .content {
+    display: block;
+    width: calc(100% - 80px);
+}
+
+footer .content p {
+    font-size: 14px;
+    color: #0c8260;
+    padding: 0;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
